@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans default-lazy-init="false" default-autowire="no" default-dependency-check="none" default-merge="false">
+  <bean id="selector" class="com.srsoft.service.Selector" lazy-init="default" autowire="default" dependency-check="default">
+    <property name="workers">
+      <set merge="default">
+        <ref bean="userService"/>
+        <ref bean="modelService"/>
+        <ref bean="powerService"/>
+        <ref bean="roleService"/>
+        <ref bean="companyService"/>
+        <ref bean="deparmentService"/>
+        <ref bean="attendanceService"/>
+        <ref bean="workflowTypeService"/>
+        <ref bean="leaveService"/>
+        <ref bean="workflowInstanceService"/>
+        <ref bean="workflowService"/>
+        <ref bean="userDefinedFormService"/>
+        <ref bean="workTimeService"/>
+        <ref bean="noticeService"/>
+        <ref bean="calendarService"/>
+        <ref bean="resourcesService"/>
+      </set>
+    </property>
+  </bean>
+</beans>

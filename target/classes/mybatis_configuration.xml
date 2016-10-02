@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="jdbc"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://182.92.228.21/vartoa?characterEncoding=UTF-8&amp;autoReconnect=true"/>
+        <property name="username" value="root"/>
+        <property name="password" value="971ea0ac060f20c995a5a3871d91deaf"/>
+        <property name="poolPingEnabled" value="true"/>
+        <property name="poolPingQuery" value="select now() from user limit 1"/>
+        <property name="poolPingConnectionsNotUsedFor" value="3600000"/>
+      </dataSource>
+    </environment>
+  </environments>
+  <mappers>
+    <mapper resource="com/srsoft/mappers/UserMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/RoleMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/RolePowerMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/ModelMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/CompanyMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/PowerMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/PowerMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/RoleMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/CompanyMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/DeparmentMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/AttendanceMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/WorkflowTypeMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/LeaveMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/WorkflowInstanceMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/WorkflowNodeMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/WorkflowLogMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/WorkTimeMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/WorkflowMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/CompanyMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/WorkflowReceiver4ccMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/UserDefinedFormMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/UserDefineFormDetailMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/UserDefineFormInstanceMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/NoticeMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/NoticeTypeMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/CalendarMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/CalendarTypeMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/ResourcesMapper.xml"/>
+    <mapper resource="com/srsoft/mappers/SyslogMapper.xml"/>
+  </mappers>
+</configuration>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <context id="mysqlTables" targetRuntime="MyBatis3">
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://182.92.228.21/vartoa" userId="root" password="971ea0ac060f20c995a5a3871d91deaf"/>
+    <javaModelGenerator targetPackage="com.srsoft.model" targetProject="src\main\java">
+      <property name="enableSubPackages" value="true"/>
+      <property name="trimStrings" value="true"/>
+    </javaModelGenerator>
+    <sqlMapGenerator targetPackage="com.srsoft.mappers" targetProject="src\main\java">
+      <property name="enableSubPackages" value="true"/>
+    </sqlMapGenerator>
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.srsoft.dao" targetProject="src\main\java">
+      <property name="enableSubPackages" value="true"/>
+    </javaClientGenerator>
+    <table tableName="syslog" domainObjectName="Syslog">
+      <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+    </table>
+  </context>
+</generatorConfiguration>

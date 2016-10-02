@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans default-lazy-init="false" default-autowire="no" default-dependency-check="none" default-merge="false">
+  <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" lazy-init="default" autowire="default" dependency-check="default">
+    <property name="url" value="jdbc:mysql://182.92.228.21/collector?characterEncoding=UTF-8&amp;autoReconnect=true"/>
+    <property name="username" value="root"/>
+    <property name="password" value="971ea0ac060f20c995a5a3871d91deaf"/>
+  </bean>
+  <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean" lazy-init="default" autowire="default" dependency-check="default">
+    <property name="dataSource" ref="dataSource"/>
+    <property name="mapperLocations" value="classpath:com/srsoft/mappers/*Mapper.xml"/>
+  </bean>
+  <bean id="userService" class="com.srsoft.service.UserService" lazy-init="default" autowire="default" dependency-check="default"/>
+  <bean id="modelService" class="com.srsoft.service.ModelService" lazy-init="default" autowire="default" dependency-check="default"/>
+  <bean id="powerService" class="com.srsoft.service.PowerService" lazy-init="default" autowire="default" dependency-check="default"/>
+  <bean id="roleService" class="com.srsoft.service.RoleService" lazy-init="default" autowire="default" dependency-check="default"/>
+  <bean id="companyService" class="com.srsoft.service.CompanyService" lazy-init="default" autowire="default" dependency-check="default"/>
+  <bean id="deparmentService" class="com.srsoft.service.DeparmentService" lazy-init="default" autowire="default" dependency-check="default"/>
+  <bean id="attendanceService" class="com.srsoft.service.AttendanceService" lazy-init="default" autowire="default" dependency-check="default"/>
+  <bean id="workflowTypeService" class="com.srsoft.service.WorkflowTypeService" lazy-init="default" autowire="default" dependency-check="default"/>
+  <bean id="leaveService" class="com.srsoft.service.LeaveService" lazy-init="default" autowire="default" dependency-check="default"/>
+  <bean id="workflowInstanceService" class="com.srsoft.service.WorkflowInstanceService" lazy-init="default" autowire="default" dependency-check="default"/>
+  <bean id="workflowService" class="com.srsoft.service.WorkflowService" lazy-init="default" autowire="default" dependency-check="default"/>
+  <bean id="userDefinedFormService" class="com.srsoft.service.UserDefinedFormService" lazy-init="default" autowire="default" dependency-check="default"/>
+  <bean id="workTimeService" class="com.srsoft.service.WorkTimeService" lazy-init="default" autowire="default" dependency-check="default"/>
+  <bean id="noticeService" class="com.srsoft.service.NoticeService" lazy-init="default" autowire="default" dependency-check="default"/>
+  <bean id="calendarService" class="com.srsoft.service.CalendarService" lazy-init="default" autowire="default" dependency-check="default"/>
+  <bean id="resourcesService" class="com.srsoft.service.ResourcesService"/>
+</beans>

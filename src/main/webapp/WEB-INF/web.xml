@@ -1,0 +1,123 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>Archetype Created Web Application</display-name>
+	<!-- 
+	<filter>
+		<filter-name>SessionTimeOut</filter-name>
+		<display-name>SessionTimeOut</display-name>
+		<description></description>
+		<filter-class>com.srsoft.service.SessionTimeOut</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>SessionTimeOut</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	 -->
+	 
+	<servlet>
+		<servlet-name>Commander</servlet-name>
+		<display-name>Commander</display-name>
+		<description></description>
+		<servlet-class>com.srsoft.service.Commander</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SecondServer</servlet-name>
+		<display-name>SecondServer</display-name>
+		<description></description>
+		<servlet-class>com.srsoft.service.SecondServer</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UploadifyServlet</servlet-name>
+		<display-name>UploadifyServlet</display-name>
+		<description></description>
+		<servlet-class>com.srsoft.service.UploadifyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Commander</servlet-name>
+		<url-pattern>/Commander</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SecondServer</servlet-name>
+		<url-pattern>/SecondServer</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UploadifyServlet</servlet-name>
+		<url-pattern>/UploadifyServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>freemarker</servlet-name>
+		<servlet-class>freemarker.ext.servlet.FreemarkerServlet</servlet-class>
+
+		<!-- FreemarkerServlet settings: -->
+		<init-param>
+			<param-name>TemplatePath</param-name>
+			<param-value>/</param-value>
+		</init-param>
+		<init-param>
+			<param-name>NoCache</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>ContentType</param-name>
+			<param-value>text/html; charset=UTF-8</param-value>
+			<!-- Forces UTF-8 output encoding! -->
+		</init-param>
+
+		<!-- FreeMarker settings: -->
+		<init-param>
+			<param-name>template_update_delay</param-name>
+			<param-value>0</param-value>
+			<!-- 0 仅用于开发阶段! Use higher value otherwise. -->
+		</init-param>
+		<init-param>
+			<param-name>default_encoding</param-name>
+			<param-value>UTF-8</param-value>
+			<!-- The encoding of the template files. -->
+		</init-param>
+		<init-param>
+			<param-name>number_format</param-name>
+			<param-value>0.##########</param-value>
+		</init-param>
+
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>Jump</servlet-name>
+		<display-name>Jump</display-name>
+		<description></description>
+		<servlet-class>com.srsoft.service.Jump</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UploadifyServlet2</servlet-name>
+		<display-name>UploadifyServlet2</display-name>
+		<description></description>
+		<servlet-class>com.srsoft.service.UploadifyServlet2</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UploadifyServlet3</servlet-name>
+		<display-name>UploadifyServlet3</display-name>
+		<description></description>
+		<servlet-class>com.srsoft.service.UploadifyServlet3</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>freemarker</servlet-name>
+		<url-pattern>*.ftl</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Jump</servlet-name>
+		<url-pattern>/Jump</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UploadifyServlet2</servlet-name>
+		<url-pattern>/UploadifyServlet2</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UploadifyServlet3</servlet-name>
+		<url-pattern>/UploadifyServlet3</url-pattern>
+	</servlet-mapping>
+</web-app>
